@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Mario Escape</title>
+</head>
+<body>
+<style>
+    
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+    
+@font-face 
+{
+    font-family: "Custom SMB";
+    src: url("smb02.ttf") format("truetype");
+}
+
+html
+{
+    text-align: center;
+}
+
+#stage 
+{
+    position: relative;
+    width: 512px;
+    height: 512px;
+    background-image: url("images/grass.png");
+    background-repeat: repeat;
+    margin: 0 auto;
+}
+    
+.sprite
+{
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+}
+    
+#game
+{
+    width: 512px;
+    height: 698px;
+    background-image: url(images/background.png);
+    background-repeat: repeat;
+    border: 1px solid black;
+    display: none;
+    margin: 0 auto;
+}
+    
+h1
+{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Custom SMB";
+}
+
+p
+{
+    font-size: 20px;
+    width: 522px;
+    font-family: "Custom SMB";
+    text-align: center;
+}
+
+#start
+{
+    width: 522px;
+    height: 698px;
+    background-image: url(images/background.png);
+    background-repeat: repeat;
+    border: 1px solid black;
+    font-family: "Custom SMB";
+    text-align: center;
+    margin: 0 auto;
+}
+
+#startButton
+{
+    font-family: "Custom SMB";
+    margin: 0 auto;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+}
+
+#resetGame
+{
+    display: none;
+    font-family: "Custom SMB";
+    margin: 0 auto;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+}
+   
+</style>
+
+<section id="game">
+  <h1>MARIO ESCAPE!</h1>
+  <div id="stage"></div>
+  <p id="output"></p> 
+  <div id="embed"></div>
+</section>
+<div id="start">
+    <h1>WELCOME TO MARIO ESCAPE!</h1>
+    <br>
+    <br>
+    <h2>Navigate using the arrow keys to lead Mario to the flag.</h2>
+    <h2>Landing on Mushrooms will give Mario health, if he has enough coins.</h2>
+    <h2>Koopa shells start a battle.</h2>
+    <h2>Be careful not to run out of time and BEWARE OF BOWSER!</h2>
+    <br>
+    <br>
+    <h1>PRESS PLAY TO BEGIN!</h1>
+</div>
+<div>
+    <button id="startButton" onclick="switchVisible();">PLAY</button>
+    <button id="resetGame">RESET</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="gamelogic.js" type="text/javascript"></script>
+
+    
+</body>    
+</html>
